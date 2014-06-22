@@ -24,13 +24,13 @@ m <- NULL
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
 
-        m <<- x$getinv()
+        m <<- x$getinv() 
         if(!is.null(m)) {  #checks if the matrix is cached
                 message("Getting cached data")
                 return(m)
         }
         data <- x$get()
         m <- solve(data) #inverses the matrix which is not cached
-        x$setinv()
+        x$setinv() 
         m
 }
